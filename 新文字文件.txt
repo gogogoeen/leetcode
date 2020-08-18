@@ -1,0 +1,38 @@
+void rotate(int* nums, int numsSize, int k){
+    if (numsSize != 0) {
+        int i;
+        int ptr;
+        for (i = 0; i < (numsSize / 2); i ++){
+            if (i < (numsSize - k % numsSize)) {                
+                if ((numsSize - i - 1) < (numsSize - k % numsSize)){    // both two swap elements are on the left 
+                    ptr = nums[numsSize - k % numsSize - i - 1];
+                    nums[numsSize - k % numsSize - i - 1] = nums[i - k % numsSize];
+                    nums[i - k % numsSize] = ptr;   
+                }else {    // one on the left, one on the right
+                    ptr = nums[numsSize - k % numsSize - i - 1];
+                    nums[numsSize - k % numsSize - i - 1] = nums[numsSize - i - 1];
+                    nums[numsSize - i - 1] = ptr;
+                }
+            }else {     // both on the right
+                ptr = nums[i];
+                nums[i] = nums[numsSize - i - 1];
+                nums[numsSize - i - 1] = ptr;
+            }
+            
+            
+        }
+    }
+}
+
+
+
+
+if (ptr -> val == node -> val){             // if target is at the beginning
+        head = deleteHead(head);
+    }else {
+        while (ptr -> next != NULL) {
+            if (ptr -> next -> val == node -> val) {
+                ptr ->
+            }
+        }
+    }
